@@ -18,7 +18,7 @@ p {
 }
 
 .topnav {
-  background-color: white;
+  background-color: lightgrey;
   overflow: hidden;
 }
 
@@ -47,5 +47,11 @@ img {
 }
 
 body {
-  background-color: lightblue;
+  background-image: url('images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top:0px;
+  left:0px;
+  width: 100%;
 }
