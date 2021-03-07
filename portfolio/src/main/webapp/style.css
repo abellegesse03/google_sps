@@ -17,6 +17,11 @@ p {
   line-height: 1.5;
 }
 
+p.intro {
+  padding-top: 50px;
+  padding-left: 305px;
+}
+
 .topnav {
   background-color: lightgrey;
   overflow: hidden;
@@ -29,11 +34,13 @@ p {
   padding: 20px 10px;
  }
 
-img {
+
+img.profile {
   float: left;
-  padding-right: 15px;
   vertical-align: middle;
-  padding-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
 }
 
 .topnav a:hover {
