@@ -22,12 +22,9 @@ async function addHelloWorld() {
   const list = document.getElementById('helloworld-container');
   list.innerHTML = '';
 
-  var random = Math.floor(Math.random() * 3);
+  const random  = Math.floor(Math.random() * 3);
 
-  list.appendChild(createTextElement(textFromResponse[random].s));
-//   list.appendChild(createTextElement(textFromResponse[1].s));
-//   list.appendChild(createTextElement(textFromResponse[2].s));
-  
+  list.appendChild(createTextElement(textFromResponse[random].s)); 
 
    response.setContentType("text/html;");
    response.getWriter().println((textFromResponse[random].s));
