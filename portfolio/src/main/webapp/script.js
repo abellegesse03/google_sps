@@ -17,8 +17,24 @@
  */
 async function addHelloWorld() {
   const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.text();
+  const textFromResponse = await responseFromServer.json();
 
-  const helloWorldContainer = document.getElementById('helloworld-container');
-  helloWorldContainer.innerText = textFromResponse;
+  const list = document.getElementById('helloworld-container');
+  list.innerHTML = '';
+
+  var random = Math.floor(Math.random() * 3);
+
+  list.appendChild(createTextElement(textFromResponse[random].s));
+//   list.appendChild(createTextElement(textFromResponse[1].s));
+//   list.appendChild(createTextElement(textFromResponse[2].s));
+  
+
+   response.setContentType("text/html;");
+   response.getWriter().println((textFromResponse[random].s));
+}
+
+function createTextElement(text) {
+  const textElement = document.createElement('p');
+  textElement.innerText = text;
+  return textElement;
 }
